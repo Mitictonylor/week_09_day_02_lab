@@ -6,12 +6,22 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      bookingList: [],
+      bookingApi:[]
+      newBooking:null
+    }
+  },
+  methods:{
+    addInBookingList:(){}
+  }
   components: {
-    HelloWorld
+
+
   }
 }
 </script>
