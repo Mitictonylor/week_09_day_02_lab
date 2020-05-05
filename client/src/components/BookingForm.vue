@@ -4,7 +4,7 @@
     <input type="text" v-model="name" required/>
     <label for="email">Email:</label>
     <input type="text" v-model="email" required/>
-    <input type="hidden" v-model="status" value="" hidden/>
+    <input type="hidden" v-model="status" value="false" hidden/>
     <input type="submit" value="Save"/>
   </form>
 </template>
@@ -17,11 +17,9 @@ export default {
   name: 'booking-form',
   data() {
     return {
-      booking: {
-        name: '',
-        email: '',
-        checkIn: ''
-      }
+      name: '',
+      email: '',
+      status: ''
     }
   },
   methods: {

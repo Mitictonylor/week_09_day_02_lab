@@ -10,6 +10,7 @@
 import BookingForm from '@/components/BookingForm';
 import BookingList from '@/components/BookingList';
 import BookingService from '@/services/BookingService';
+import {eventBus} from '@/main.js';
 
 export default {
   name: 'App',
@@ -24,7 +25,7 @@ export default {
     "booking-list": BookingList,
   },
   mounted() {
-    this.getBookings();
+    this.getBooking();
 
     eventBus.$on('booking-added', (booking) => {
       this.bookings.push(booking);
@@ -42,8 +43,8 @@ export default {
 
   },
   methods: {
-    getBookings(){
-      BookingService.getBookings()
+    getBooking(){
+      BookingService.getBooking()
       .then(bookings => this.bookings = bookings)
     }
   }
