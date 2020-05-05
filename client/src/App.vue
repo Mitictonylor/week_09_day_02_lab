@@ -30,6 +30,16 @@ export default {
       this.bookings.push(booking);
     });
 
+    eventBus.$on('booking-updated', (updatedBooking) => {
+      let index = this.bookings.findIndex(booking => booking._id === updatedBooking._id);
+      this.bookings.splice(index, 1 updatedBooking);
+    });
+
+    eventBus.$on('booking-deleted', (id) => {
+      let index = this.bookings.findIndex(booking => booking._id === id);
+      this.bookings.splice(index, 1);
+    })
+
   },
   methods: {
     getBookings(){
