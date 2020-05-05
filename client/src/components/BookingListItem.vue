@@ -2,7 +2,7 @@
   <div>
     <p>{{booking.name}}</p>
     <p>{{booking.email}}</p>
-    <button type="button" v-on:click="updateBooking">Update</button>
+    <button v-if="!booking.status"type="button" v-on:click="updateBooking">Check-In</button>
     <button type="button" v-on:click="deleteBooking">Delete</button>
   </div>
 </template>

@@ -1,5 +1,7 @@
 <template lang="html">
-  <booking-list-item v-for="booking in bookings" :booking="booking"></booking-list-item>
+  <div>
+    <booking-list-item v-for="booking in bookings" :booking="booking"></booking-list-item>
+  </div>
 </template>
 
 <script>

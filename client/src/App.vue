@@ -2,14 +2,15 @@
   <div>
     <p class="title">Hotel Bookings</p>
     <booking-form></booking-form>
-    <booking-list :bookings="bookings"><booking-list>
+    <booking-list :bookings="bookings"></booking-list>
   </div>
 </template>
 
 <script>
 import BookingForm from '@/components/BookingForm';
 import BookingList from '@/components/BookingList';
-import BookingService from '@/components/BookingService';
+import BookingService from '@/services/BookingService';
+import {eventBus} from '@/main.js';
 
 export default {
   name: 'App',
@@ -24,7 +25,7 @@ export default {
     "booking-list": BookingList,
   },
   mounted() {
-    this.getBookings();
+    this.getBooking();
 
     eventBus.$on('booking-added', (booking) => {
       this.bookings.push(booking);
@@ -32,7 +33,7 @@ export default {
 
     eventBus.$on('booking-updated', (updatedBooking) => {
       let index = this.bookings.findIndex(booking => booking._id === updatedBooking._id);
-      this.bookings.splice(index, 1 updatedBooking);
+      this.bookings.splice(index, 1, updatedBooking);
     });
 
     eventBus.$on('booking-deleted', (id) => {
@@ -42,8 +43,8 @@ export default {
 
   },
   methods: {
-    getBookings(){
-      BookingService.getBookings()
+    getBooking(){
+      BookingService.getBooking()
       .then(bookings => this.bookings = bookings)
     }
   }
