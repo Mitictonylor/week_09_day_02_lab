@@ -12,7 +12,7 @@ export default {
   data(){
     return{
       bookingList: [],
-      bookingApi:[]
+      bookingApi:[],
       newBooking:null
     }
   },
