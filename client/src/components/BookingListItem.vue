@@ -1,5 +1,5 @@
 <template lang="html">
-  <div>
+  <div class="booking">
     <p>{{booking.name}}</p>
     <p>{{booking.email}}</p>
     <button v-if="!booking.status"type="button" v-on:click="updateBooking">Check-In</button>
@@ -29,4 +29,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.booking{
+  border-style: solid;
+  width: 200px;
+  float: left;
+  margin: 5px;
+}
+
+@media screen and (max-width: 600px) {
+  .booking {
+    border-style: solid;
+    width: 400px;
+  }
+}
 </style>
