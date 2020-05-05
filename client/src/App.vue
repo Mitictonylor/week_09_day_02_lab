@@ -65,17 +65,18 @@ export default {
   font-size: 50px;
   color: #cb997e;
   font-family: 'Open Sans', sans-serif;
+  text-shadow: 1px 0 0 #794D3F, 0 -1px 0 black, 0 1px 0 #794D3F, -2px 0 0 #794D3F;
 }
 
 @media screen and (max-width: 730px) {
   .title {
-    font-size: 80px;
+    font-size: 6vw;
   }
 }
 .logo-container {
   width: 15%;
   float: left;
-    border-style: solid;
+
 }
 .logo {
   height: 50px;
@@ -85,30 +86,34 @@ export default {
 .title-container {
   width: 75%;
   float: left;
-  border-style: solid;
+
+
 }
 .menu-bar-container {
-  border-style: solid;
+  background-color: #fff1e6;
+
   overflow: auto;
   display: block;
   text-align: center;
+
 }
 .menu-bar {
-  border-style: solid;
+
   overflow: auto;
   display: inline-block;
   text-align: center;
-  width: 42%;
+  width: 55%;
+
+
 }
 </style>
 
 <style>
 body {
-  /* background-image: url('assets/background.png');
+  background-color: #fff1e6;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-  cursor: url('assets/cursor.png'), auto; */
   user-select: none;
 }
 p {
