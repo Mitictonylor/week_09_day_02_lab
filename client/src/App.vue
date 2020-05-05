@@ -7,8 +7,9 @@
 </template>
 
 <script>
-import BookingForm from '@/components/BookingForm.vue';
-import BookingList from '@/components/BookingList.vue';
+import BookingForm from '@/components/BookingForm';
+import BookingList from '@/components/BookingList';
+import BookingService from '@/components/BookingService';
 
 export default {
   name: 'App',
@@ -28,7 +29,7 @@ export default {
     eventBus.$on('booking-added', (booking) => {
       this.bookings.push(booking);
     });
-    
+
   },
   methods: {
     getBookings(){
