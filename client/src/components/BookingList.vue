@@ -23,12 +23,15 @@ export default {
 
 <style lang="css" scoped>
 .list-container {
-  border-style: solid;
+  background-color: #fff1e6;
+  
   display: block;
   text-align: center;
+
 }
 .list {
-  border-style: solid;
+
+
   width: 80%;
   display: inline-block;
 }
