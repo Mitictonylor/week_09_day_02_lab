@@ -1,6 +1,10 @@
 <template lang="html">
   <div>
+    <div class="list-container">
+      <div class="list">
     <booking-list-item v-for="booking in bookings" :booking="booking"></booking-list-item>
+    </div>
+    </div>
   </div>
 </template>
 
@@ -18,4 +22,17 @@ export default {
 </script>
 
 <style lang="css" scoped>
+.list-container {
+  background-color: #fff1e6;
+  
+  display: block;
+  text-align: center;
+
+}
+.list {
+
+
+  width: 80%;
+  display: inline-block;
+}
 </style>
