@@ -17,7 +17,7 @@ const createRouter = function (collection) {
     });
   });
 
-  router.post('/:id', (req, res) => {
+  router.post('/', (req, res) => {
     const newBooking = req.body;
     collection.insertOne(newBooking)
     .then(result => res.json(result.ops[0]))
