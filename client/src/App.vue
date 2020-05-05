@@ -23,7 +23,12 @@ export default {
     "booking-list": BookingList,
   },
   mounted() {
-    this.getBookings()
+    this.getBookings();
+
+    eventBus.$on('booking-added', (booking) => {
+      this.bookings.push(booking);
+    });
+    
   },
   methods: {
     getBookings(){
