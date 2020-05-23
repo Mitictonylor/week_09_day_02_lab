@@ -7,7 +7,7 @@
       </div>
       <div class="email">
         <label for="email">Email:</label>
-        <input type="text" v-model="email" placeholder="    Insert email address" required/>
+        <input type="email" v-model="email" placeholder="    Insert email address" required/>
       </div>
       <div class="status">
         <input type="hidden" v-model="status" value="false" hidden/>
@@ -77,6 +77,20 @@ input[type=text]{
   border-radius: 15px 0px 15px 0px;
 }
 input[type=text]:hover{
+  width: 100%;
+  background-color: transparent;
+  font-size: 20px;
+  border: solid 3px #eddcd2;
+  border-radius: 0px 15px 0px 15px;
+}
+input[type=email]{
+  width: 100%;
+  background-color: transparent;
+  font-size: 20px;
+  border: solid 3px #DACBB8;
+  border-radius: 15px 0px 15px 0px;
+}
+input[type=email]:hover{
   width: 100%;
   background-color: transparent;
   font-size: 20px;
