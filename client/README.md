@@ -1,5 +1,5 @@
 # hotel_booking
-
+ 
 ## Project setup
 ```
 npm install in both client and server folder
